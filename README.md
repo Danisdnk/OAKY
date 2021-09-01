@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+# Aplicaciones Interactivas | 2C 2021 | VIERNES NOCHE | UADE - TPO INDIVIDUAL|
+## Tecnologias utilizadas: REACT.JS| HTML5 | CSS3 | ANT DESIGN UI | NODE.JS |
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+para poder ejecutar la aplicacion:
+- clonar repo 
+- abrir el proyecto con editor y/o desde cmd en la carpeta del proyecto hacer  `npm install`
+- inicializarla con `npm start` `npm test` segun corresponda el puerto es http://localhost:3000
+# Consigna 📒: 
+desarrollar una aplicación web que permitirá gestionar controles pediátricos
+# REQUISITOS FUNCIONALES
+### SITIO INSTITUCIONAL
+La aplicación debe incluir un sitio institucional en donde se promocione las funcionalidades del sistema y se publiquen artículos informativos.
+Debe incluir como mínimo:
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Descripción de la aplicación: Explicación de las funcionalidades disponibles para los usuarios
+- Registro de nuevos usuarios
+- Ingreso a la aplicación
+- Artículos de información general
+- Calendario de vacunación
+- Información sobre controles médicos
+- Percentiles y parámetros generales de control
+### REGISTRO NUEVOS USUARIOS
+Los usuarios podrán registrarse para utilizar la aplicación, para ello deberán completar un formulario con la siguiente información: nombre y apellido, DNI, mail, número de teléfono.
+No se permitirá registrar usuarios con el mismo DNI.
+### INGRESO USUARIOS
+Los usuarios podrán ingresar a la aplicación con su mail y contraseña. Tendrán la posibilidad de solicitar una nueva en caso de olvidarla mediante la opción OLVIDE CONTRASEÑA. Se recomienda utilizar algún criterio de validación para el reseteo de la misma.
+### PERFIL USUARIOS REGISTRADOS
+Los usuarios registrados podrán gestionar los controles de sus niños desde su perfil. El perfil debe registrar la siguiente información como mínimo: nombre y apellido, DNI, mail, teléfono celular, información de los niños a controlar (nombre, fecha de nacimiento, grupo sanguíneo, alergias, enfermedades crónicas (celiaquía, intolerancia lactosa, diabetes, etc.))
+### REGISTRO DE CONTROL PEDIATRICO
+Los usuarios podrán registrar un nuevo control pediátrico a cada niño de su perfil. Un control pediátrico registra para un niño: fecha, peso, altura, diámetro cabeza (se mide hasta el año), observaciones, medicamentos recetados (medicamento, dosis, periodo), estudios médicos a realizar y sus resultados.
+### REGISTRO DE VACUNAS
+Los usuarios podrán registrar cada una de las vacunas aplicadas a los niños. Para ello el sistema debe contar con una replica del calendario de vacunación y permitir al usuario completar el mismo ingresando en la vacuna correspondiente la fecha y lugar de aplicación.
+### CONSULTA DE PERCENTILES
+Los usuarios podrán comparar los controles de sus hijos con los percentiles de Curva de Crecimiento ofrecidos por la OMS.
+Para ello el usuario podrá visualizar todos los controles del niño en una tabla (Edad, peso, talla o altura, circunferencia cefálica y el grafico correspondiente.
