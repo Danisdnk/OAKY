@@ -1,11 +1,11 @@
-# Aplicaciones Interactivas | 2C 2021 | VIERNES NOCHE | UADE - TPO INDIVIDUAL|
-## Tecnologias utilizadas: REACT.JS| HTML5 | CSS3 | ANT DESIGN UI | NODE.JS |
+### Aplicaciones Interactivas | 2C 2021 | VIERNES NOCHE | UADE - TPO INDIVIDUAL|
+Tecnologias utilizadas: REACT.JS| HTML5 | CSS3 | ANT DESIGN UI | NODE.JS |
 
 para poder ejecutar la aplicacion:
 - clonar repo 
 - abrir el proyecto con editor y/o desde cmd en la carpeta del proyecto hacer  `npm install`
 - inicializarla con `npm start` `npm test` segun corresponda el puerto es http://localhost:3000
-# Consigna 📒: 
+### Consigna 📒: 
 desarrollar una aplicación web que permitirá gestionar controles pediátricos
 # REQUISITOS FUNCIONALES
 ### SITIO INSTITUCIONAL
