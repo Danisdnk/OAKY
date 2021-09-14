@@ -1,6 +1,5 @@
 import { Row, Col, Typography, Image } from 'antd';
 import background from "../../img/doctor.svg";
-import wave from "../../img/wave.png";
 import { Wave } from "../atoms/Wave"
 export const Banner = () => {
     return (
@@ -21,14 +20,13 @@ export const Banner = () => {
 
                     <Image width={'100%'} src={background} preview={false} />
                 </Col>
-            </Row>
-            <Row justify="end">
+
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                     <Wave />
                     {/* <Image width={'100%'} src={wave} preview={false} /> */}
                 </Col>
             </Row >
-            
+
         </>
     );
 }
