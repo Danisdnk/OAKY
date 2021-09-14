@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './App.less';
-import App from './App';
+import {OakyApp} from './OakyApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <OakyApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
