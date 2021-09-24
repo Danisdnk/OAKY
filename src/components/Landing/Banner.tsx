@@ -6,8 +6,8 @@ export const Banner = () => {
         <>
             <Row justify="center" style={{ backgroundColor: '#ff4029' }}>
                 <Col offset={1} xs={20} sm={24} md={6} lg={12} xl={8} >
-                    <Typography.Title level={1} underline={true} type="warning">
-                        Controles
+                    <Typography.Title level={1} style={{marginTop:'20% '}} type="warning">
+                        Bienvenido a Oaky gestion
                     </Typography.Title>
 
                     <Typography.Paragraph type="warning">
