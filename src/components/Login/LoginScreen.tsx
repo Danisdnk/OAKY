@@ -1,19 +1,35 @@
-
-import { Form, Input, Button, Checkbox, Layout, Col, Row, Image, Divider, Typography } from 'antd';
+/* eslint-disable no-label-var */
+import { Form, Input, Button, Checkbox, Col, Row, Divider } from 'antd';
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
+import { useHistory } from 'react-router';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 export const LoginScreen = () => {
 
-    const { Header, Footer, Sider, Content } = Layout;
+    const [log, setLog] = useState(false)
 
     const onFinish = (values: string) => {
-        console.log('Received values of form: ', values);
+        if (values != null || values !== "") {
+            setLog(true);
+        }
     };
-let nombre="Gustavo"
-    return (
-        // gutter={{ xs: 8, sm: 16, md: 8, lg: 8 }}
-        <>
 
+    let nombre = "Gustavo"
+
+    const history = useHistory();
+
+    let iniciarSesion = () => {
+        if (log === true) {
+            let path = `/home`;
+            history.push(path);
+        }
+
+
+    };
+
+    return (
+        <>
             <div style={{ maxHeight: '100%' }} >
 
                 <Row align="middle" wrap={true} style={{ alignItems: 'center' }}  >
@@ -30,38 +46,38 @@ let nombre="Gustavo"
                     </Col>
 
                     <Col xs={20} sm={20} md={14} lg={12} xl={8} style={{ textAlign: 'center' }}>
-
-
-
-
                         <Divider>
-                            <Avatar size={128} icon={<UserOutlined />}/>
+                            <Avatar size={128} icon={<UserOutlined />} />
                         </Divider>
                         <Divider>
-                          Bienvenido {nombre}
+                            Bienvenido {nombre}
                         </Divider>
                         <Form
-                            style={{ paddingRight: '30%' }}
-                            name="HOLA"
+
+                            name="registro"
+
                             labelCol={{
-                                span: 8,
+                                span: 4,
                             }}
                             wrapperCol={{
-                                span: 16,
+                                span: 18,
                             }}
+
                             initialValues={{
                                 remember: true,
                             }}
+
                             onFinish={onFinish}
                             autoComplete="off"
+
                         >
                             <Form.Item
-                                label="Username"
+                                label="Email"
                                 name="username"
                                 rules={[
                                     {
                                         required: true,
-                                        message: 'Please input your username!',
+                                        message: 'Porfavor ingresa tu Email!',
                                     },
                                 ]}
                             >
@@ -74,7 +90,7 @@ let nombre="Gustavo"
                                 rules={[
                                     {
                                         required: true,
-                                        message: 'Please input your password!',
+                                        message: 'Porfavor ingresa tu contraseña!',
                                     },
                                 ]}
                             >
@@ -85,29 +101,47 @@ let nombre="Gustavo"
                                 name="remember"
                                 valuePropName="checked"
                                 wrapperCol={{
-                                    offset: 8
 
+                                    xs: 20,
+                                    sm: 24,
+                                    md: 24,
+                                    lg: 24,
+                                    xl: 24,
+                                    xxl: 24,
                                 }}
                             >
-                                <Checkbox>Remember me</Checkbox>
+                                <Checkbox>Recordar mis datos </Checkbox>
                             </Form.Item>
 
                             <Form.Item
                                 wrapperCol={{
-                                    offset: 8,
 
+                                    xs: 20,
+                                    sm: 24,
+                                    md: 24,
+                                    lg: 24,
+                                    xl: 24,
+                                    xxl: 24,
                                 }}
                             >
-                                <Button type="primary" htmlType="submit">
-                                    Submit
+                                <Button type="primary" htmlType="submit" onClick={iniciarSesion}>
+                                    Iniciar sesion
                                 </Button>
                             </Form.Item>
+
+                            <Divider>
+                                <Link to="/register">¿No tenes usuario? Registrate acá</Link>
+                            </Divider>
+
+
+                            <Divider>
+                                <Link to="/password-reset">¿Olvidaste tu contraseña? Recuperala acá</Link>
+                            </Divider>
+
+
                         </Form>
                     </Col>
-
                 </Row>
-
-
             </div>
         </   >
     );
